@@ -24,7 +24,7 @@
 			let li = document.createElement('li');
 			let a = document.createElement('a');
 			a.target = '_blank';
-			a.href = `https://d.seati.cc/uploads/${f.filename}`;
+			a.href = `https://fnmdp-1253679544.cos.ap-hongkong.myqcloud.com/uploads/${f.filename}`;
 			a.innerText = f.displayname;
 			let html = `${a.outerHTML} - ${f.size} - ${f.date} - <em>${f.desc || '<span style="color: #aaa">暂无简介</span>'}</em>`;
 			if (f.filename.endsWith('7z')) html += '<span class="badge z7">7z</span>';
