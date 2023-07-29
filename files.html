@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/files.css" />
+		<script src="./files.js"></script>
+		<title>📦 文件列表</title>
+	</head>
+	<body>
+        <a href="/" class="back">
+            返回首页
+        </a>
+		<div class="article">
+			<h1 class="title">文件列表</h1>
+			<p>这个页面列出了当前公开下载的所有文件地址，单击即可下载。提示：压缩率=压缩后/压缩前*100%，越低越好。</p>
+			<ul id="filelist"></ul>
+		</div>
+	</body>
+	<script>
+		const filelist = document.getElementById('filelist');
+		for (let i = 0; i < files.length; i++) {
+			let f = files[i];
+			let li = document.createElement('li');
+			let a = document.createElement('a');
+			a.target = '_blank';
+			a.href = `https://d.seati.top/uploads/${f.filename}`;
+			a.innerText = f.displayname;
+			let html = `${a.outerHTML} - ${f.size} - ${f.date} - <em>${f.desc || '<span style="color: #aaa">暂无简介</span>'}</em>`;
+			if (f.filename.endsWith('7z')) html += '<span class="badge z7">7z</span>';
+            if (f.filename.endsWith('zip')) html += '<span class="badge zip">zip</span>'
+			if (f.compression) html += `<span class="badge compression-ratio">压缩率 ${(f.compression.compressed / f.compression.original).toFixed(2) * 100}%</span>`;
+			li.innerHTML = html;
+			filelist.append(li);
+		}
+	</script>
+</html>

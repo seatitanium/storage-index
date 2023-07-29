@@ -1,0 +1,22 @@
+@import "./global.css";
+
+.badge {
+    border: 1px solid rgba(0, 0, 0, .2);
+    display: inline-block;
+    border-radius: 5px;
+    padding: .2rem .4rem;
+    line-height: 1;
+    font-size: .75rem;
+    margin: 0 .25rem;
+}
+
+.badge.z7 {
+    color: white;
+    background: black;
+}
+
+.badge.zip {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+}

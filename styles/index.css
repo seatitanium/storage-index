@@ -1,0 +1,17 @@
+@import "./global.css";
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.action::after {
+    content: "·";
+    margin: 0 4px;
+    color: black;
+}
+
+.action:last-child::after {
+    content: none;
+}
