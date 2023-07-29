@@ -16,10 +16,10 @@ jobs:
     - name: Setup SSH Deploy Keys
       run: |
         mkdir -p ~/.ssh
-        echo '${{ secrets.PRIVKEY }}' > ./key
-        chmod 600 ./key
+        echo '${{ secrets.PRIVKEY }}' > ../key
+        chmod 600 ../key
         echo '${{ secrets.KNOWN_HOSTS }}' > ~/.ssh/known_hosts
   
     - name: Deploy
       run: |
-        scp -i ./key -r ./* root@8.218.58.237:/home/wwwroot/seati-storage
+        scp -i ../key -r ./* root@8.218.58.237:/home/wwwroot/seati-storage
