@@ -72,11 +72,14 @@ h1 {
     margin: 1rem 0;
 }
 
-h2, h3, p {
+h2,
+h3,
+p {
     margin: .5rem 0;
 }
 
-p, li {
+p,
+li {
     line-height: 1.5;
 }
 
@@ -107,4 +110,10 @@ code {
     margin: 0 .2rem;
     font-size: .8rem;
     padding: .2rem .4rem;
+}
+
+.exclaim {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #2196f3;
 }
