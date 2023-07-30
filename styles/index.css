@@ -1,17 +1,41 @@
 @import "./global.css";
 
+body {
+    overflow: hidden;
+}
+
 .actions {
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
 }
 
-.action::after {
-    content: "·";
-    margin: 0 4px;
-    color: black;
+@media (max-width: 700px) {
+    .actions {
+        flex-direction: column;
+        gap: .5rem;
+        width: 100%;
+    }
+
+    .action {
+        color: white;
+        background: #2196f3;
+        padding: .4rem .6rem;
+        border-radius: 5px;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        box-shadow: 0 1px 0 1px #1976d2;
+    }
 }
 
-.action:last-child::after {
-    content: none;
+@media (min-width: 700px) {
+    .action::after {
+        content: "·";
+        margin: 0 4px;
+        color: black;
+    }
+    
+    .action:last-child::after {
+        content: none;
+    }
 }

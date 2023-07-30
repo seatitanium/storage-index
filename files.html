@@ -8,9 +8,7 @@
 		<title>📦 文件列表</title>
 	</head>
 	<body>
-        <a href="/" class="back">
-            返回首页
-        </a>
+		<a href="/" class="back"> 返回首页 </a>
 		<div class="article">
 			<h1 class="title">文件列表</h1>
 			<p>这个页面列出了当前公开下载的所有文件地址，单击即可下载。提示：压缩率=压缩后/压缩前*100%，越低越好。</p>
@@ -19,8 +17,9 @@
 	</body>
 	<script>
 		const filelist = document.getElementById('filelist');
-		for (let i = 0; i < files.length; i++) {
-			let f = files[i];
+		const sortedFiles = files.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+		for (let i = 0; i < sortedFiles.length; i++) {
+			let f = sortedFiles[i];
 			let li = document.createElement('li');
 			let a = document.createElement('a');
 			a.target = '_blank';
@@ -28,7 +27,7 @@
 			a.innerText = f.displayname;
 			let html = `${a.outerHTML} - ${f.size} - ${f.date} - <em>${f.desc || '<span style="color: #aaa">暂无简介</span>'}</em>`;
 			if (f.filename.endsWith('7z')) html += '<span class="badge z7">7z</span>';
-            if (f.filename.endsWith('zip')) html += '<span class="badge zip">zip</span>'
+			if (f.filename.endsWith('zip')) html += '<span class="badge zip">zip</span>';
 			if (f.compression) html += `<span class="badge compression-ratio">压缩率 ${(f.compression.compressed / f.compression.original).toFixed(2) * 100}%</span>`;
 			li.innerHTML = html;
 			filelist.append(li);
