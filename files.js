@@ -35,6 +35,7 @@ const files = [
         filename: "ST8/world.7z",
         size: "7.8 GiB",
         date: "2023-08-14",
+        desc: "st8使用的是无限整合包，结果只玩了不到半个月...（8.1-8.13）",
         compression: {
             original: 1136,
             compressed: 784
