@@ -19,5 +19,25 @@ const files = [
             original: 206,
             compressed: 170
         }
+    },
+    {
+        displayname: "st8模组包",
+        filename: "ST8/mods.zip",
+        size: "262 MiB",
+        date: "2023-08-14",
+        compression: {
+            original: 275,
+            compressed: 261
+        }
+    },
+    {
+        displayname: "st8存档",
+        filename: "ST8/world.7z",
+        size: "7.8 GiB",
+        date: "2023-08-14",
+        compression: {
+            original: 1136,
+            compressed: 784
+        }
     }
 ]
