@@ -61,5 +61,26 @@ const files = [
             original: 459,
             compressed: 419
         }
+    },
+    {
+        displayname: 'st10存档',
+        filename: 'ST10/world.7z',
+        size: '338 MiB',
+        date: '2024-01-13',
+        desc: 'st10周目为自2018年至今历时最长的一个周目，开启时长接近3K小时，整合包为Nomifactory CEu，不得不说是真滴耐玩（9.12-1.13）。共计 7 人真正参与了游戏。',
+        compression: {
+            original: 490,
+            compressed: 338
+        }
+    },
+    {
+        displayname: 'st10模组包',
+        filename: 'ST10/mods.zip',
+        size: '179 MiB',
+        date: '2024-01-13',
+        compression: {
+            original: 201,
+            compressed: 179
+        }
     }
 ]
